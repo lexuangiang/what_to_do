@@ -1,12 +1,29 @@
-<%= simple_form_for(@task) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :content %>
-    <%= f.input :state %>
+<div class="container padding-top">
+  <div class="row">
+    <%= simple_form_for(@task) do |f| %>
+    <%= f.error_notification %>
+    <form role="form" class="contact-form">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="form-group">
+            <%= f.input :title, class: "form-control" %>
+            <%= f.input :state, as: :hidden %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="form-group">
+            <%= f.input :content, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.button :submit, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </form>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

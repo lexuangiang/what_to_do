@@ -1,20 +1,36 @@
-<tr>
-
-  <td><%= link_to 'Show', task %></td>
-  <td><%= link_to 'Edit', edit_task_path(task) %></td>
-  <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
-
-</tr>
-<div class="panel panel-primary">
-  <div class="panel heading">created <%= time_ago_in_words(task.created_at) %>ago</div>
-  <div class="panel-body"><%= task.content %></div>
-  <div class="panel-footer text-center">
-    <% if task.state =="doing" %>
-      <%= link_to "Mark as to_do", change_task_path(task,state: "to_do"), method: :put %>
-      <%= link_to "Mark as done", change_task_path(task,state: "done"), method: :put %>
-  <% else %>
-      <%= link_to "Mark as doing", change_task_path(task,state: "doing"), method: :put %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="offer offer-info">
+        <span class="offer-top">
+          <%= link_to '', task, class: "fa fa-eye" %>
+          <%= link_to '', edit_task_path(task), class: "fa fa-pencil-square-o" %>
+          <%= link_to '', task, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash" %>
+        </span>
+        <div class="shape">
+          <div class="shape-text">
+            <span class="glyphicon clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+          </div>
+        </div>
+        <div class="offer-header">
+          <h3 class="lead"><label class="label label-info"><%= task.title %></label>
+          </h3>
+        </div>
+        <div class="offer-content"><p><%= task.content %></p></div>
+        <div class="offer-footer">
+          <% if task.state =="doing" %>
+            <%= link_to "", change_task_path(task,state: "to_do"), method: :put, class: "fa fa-chevron-circle-left btn btn-primary" %>
+            <%= link_to "", change_task_path(task,state: "done"), method: :put, class: "fa fa-chevron-circle-right btn btn-primary" %>
+          <% end %>
+          <% if task.state =="done" %>
+            <%= link_to "", change_task_path(task,state: "doing"), method: :put, class: "fa fa-chevron-circle-left btn btn-primary" %>
+          <% end %>
+          <% if task.state =="to_do" %>
+            <%= link_to "", change_task_path(task,state: "doing"), method: :put, class: "fa fa-chevron-circle-right btn btn-primary" %>
+          <% end %>
+          <%= time_ago_in_words(task.created_at) %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

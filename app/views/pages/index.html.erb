@@ -1,5 +1,104 @@
-<div class="jumbotron">
-  <h1>The list to do</h1>
-  <p>This is something to read.</p>
-  <%= link_to "Signup", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+<%= render "layouts/slider" %>
+<div class="container">
+<!-- Marketing Icons Section -->
+  <div class="row-fluid">
+    <div class="col-lg-12">
+      <h1 class="page-header"><%= t".welcome" %></h1>
+    </div>
+    <div class="col-md-4 span5 offsetHalf block">
+      <div class="pull-center">
+          <h3 class="block-header"><i class="fa fa-list-alt"></i><strong><%= t".todo" %></strong></h3>
+          <p><%= t".description_todo" %></p>
+          <%= link_to t(".go_to"), tasks_path, class: "btn btn-info btn-flat" %>
+      </div>
+    </div>
+    <div class="col-md-4 span5 offsetHalf block">
+      <div class="pull-center">
+        <h3 class="block-header"><i class="fa fa-lightbulb-o"></i><strong><%= t".idea" %></strong></h3>
+      </div>
+        <p><%= t".description_shareidea" %></p>
+        <%= link_to t(".go_to"), root_path, class: "btn btn-info btn-flat" %>
+    </div>
+    <div class="col-md-4 span5 offsetHalf block">
+      <div class="pull-center">
+        <h3 class="block-header"><i class="fa fa-gamepad"></i><strong><%= t".relax" %></strong></h3>
+      </div>
+        <p><%= t".description_relax" %></p>
+        <%= link_to t(".go_to"), root_path, class: "btn btn-info btn-flat" %>
+    </div>
+    </div>
+  </div>
+<!-- Portfolio Section -->
+  <div class="row-fluid">
+    <div class="col-lg-12">
+      <h2 class="page-header"><%= t".projects" %></h2>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <a href="#">
+        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+      </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <a href="#">
+        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+      </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <a href="#">
+        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+      </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <a href="#">
+        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+      </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <a href="#">
+        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+      </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <a href="#">
+        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+      </a>
+    </div>
+  </div>
+<!-- Features Section -->
+  <div class="row myself-bg">
+    <div class="col-lg-12">
+      <h2 class="page-header"><%= t".background" %></h2>
+    </div>
+    <div class="col-md-6">
+      <p><%= t".intro" %></p>
+      <ul>
+        <li><div class="fa fa-male"><%= t".name" %></div></li>
+        <li><div class="fa fa-birthday-cake"><%= t".birthday" %></div></li>
+        <li><div class="fa fa-home"><%= t".homeland" %></div></li>
+        <li><div class="fa fa-graduation-cap"><%= t".graduated" %></div></li>
+        <li><div class="fa fa fa-language"><%= t".language" %></div></li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+        <img class="img-responsive" src="http://suckhoegiadinh24h.vn/wp-content/uploads/2017/03/profile.jpg" alt="">
+    </div>
+  </div>
+<hr>
+<!-- Call to Action Section -->
+  <div class="well contact">
+    <div class="row ">
+      <div class="col-md-8 "><p><%= t".contact" %></p></div>
+      <div class="col-md-4 ">
+        <div class="text-center center-block">
+            <p class="txt-railway">- Contact Me -</p>
+            <br />
+                <a href="https://www.facebook.com/lxgiang94" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+              <a href="https://www.linkedin.com/in/giang-le-xuan-b7b783130/" target="_blank"><i id="social-li" class="fa fa fa-linkedin-square fa-3x social"></i></a>
+              <a href="https://github.com/lexuangiang" target="_blank"><i id="social-gh" class="fa fa fa-github fa-3x social"></i></a>
+              <a href="mailto:xuangiangkt94@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+</div>
+      </div>
+    </div>
+  </div>
+<hr>
 </div>

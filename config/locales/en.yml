@@ -1,6 +1,28 @@
 en:
   layouts:
     header:
-      name: "ToDo"
+      name: " TamaoProduction"
       home: "Home"
       login: "Login"
+    slider:
+      caption1: " We are all travelers in the wilderness of the world, and the best we can find in our travels is an honest friend. ROBERT L. STEVENSON"
+      caption2: " Nothing is too small to know, and nothing too big to attempt - WILLIAM VAN HORNE"
+      caption3: " Success is a journey, not a destination. The doing is often more important than the outcome - ARTHUR ASHE"
+  pages:
+    index:
+      welcome: " WELCOME TO ME !"
+      todo: " Todo List"
+      idea: " Share ideas"
+      relax: " Relax"
+      description_todo: " Everything in your life requires at least some kind of organization and it’s also something you have to do and keep track of every day. It’s okay if you can’t keep track of it all because most of us can’t either.  Let's me help you with 'Todo'."
+      description_shareidea: " If you have an idea and you want to share it with everyone. Write it down and share it. You can also search for new ideas from the community or find partners for your ideas. The idea is sharing."
+      description_relax: " Just a mini-game to relax ^_^! Let's your head restart to work better."
+      projects: " MY PROJECTS"
+      background: " BACKGROUND"
+      intro: " This information to help you understand more about me:"
+      name: " Giang, Le Xuan."
+      birthday: " Born in 1994."
+      homeland: " Kon Tum city."
+      graduated: " Graduated in 2016"
+      language: " C#, ruby on rails"
+      contact: " If you have information  would like to exchange, please contact me. I will reply within 24 hours."
